@@ -1,0 +1,374 @@
+:root {
+    /* Paleta de colores HTB / Cyberpunk */
+    --bg-principal: #0b0f19;    /* Fondo oscuro profundo de terminal */
+    --bg-tarjeta: #151d30;      /* Gris azulado muy oscuro para los bloques */
+    --neon-verde: #9fef00;      /* El verde clásico brillante de Hack The Box */
+    --neon-cian: #00e5ff;       /* Un cian brillante para variar detalles */
+    --texto-brillante: #ffffff;  /* Texto principal */
+    --texto-apagado: #94a3b8;    /* Texto secundario para descripciones */
+    
+    /* Tipografías */
+    --fuente-codigo: 'Courier New', Courier, monospace; /* Vibra terminal */
+    --fuente-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reseteo básico para que todo encaje bien */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Hace que al hacer clic en el menú, la pantalla baje suavemente */
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-apagado);
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+header {
+    background-color: rgba(11, 15, 25, 0.95); /* Fondo oscuro con leve transparencia */
+    border-bottom: 2px solid var(--neon-verde); /* Línea verde neón abajo */
+    box-shadow: 0 0 15px rgba(159, 239, 0, 0.3); /* Brillo neón difuminado */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.Menu ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos en el menú */
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.Menu li {
+    margin: 0 1.5rem;
+}
+
+.Menu a {
+    color: var(--texto-brillante);
+    text-decoration: none;
+    font-family: var(--fuente-codigo); /* Estilo letra de consola */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Transición suave exigida por la tarea */
+}
+
+/* Efecto Hover en el Menú (Aparece el verde neón) */
+.Menu a:hover {
+    color: var(--neon-verde);
+    text-shadow: 0 0 8px var(--neon-verde), 0 0 15px var(--neon-verde);
+}
+
+/* ==========================================
+   EFECTO DE ANIMACIÓN: RESPIRACIÓN NEÓN (GLOW)
+   ========================================== */
+@keyframes neon-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(159, 239, 0, 0.2), 
+                    inset 0 0 5px rgba(159, 239, 0, 0.1);
+        text-shadow: 0 0 2px rgba(159, 239, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(159, 239, 0, 0.6), 
+                    inset 0 0 10px rgba(159, 239, 0, 0.3);
+        text-shadow: 0 0 8px var(--neon-verde), 
+                     0 0 15px var(--neon-verde);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(159, 239, 0, 0.2), 
+                    inset 0 0 5px rgba(159, 239, 0, 0.1);
+        text-shadow: 0 0 2px rgba(159, 239, 0, 0.3);
+    }
+}
+
+
+/* ==========================================
+   4. ANIMACIÓN DE RESPIRACIÓN NEÓN (GLOW)
+   ========================================== */
+@keyframes neon-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(159, 239, 0, 0.2), 
+                    inset 0 0 5px rgba(159, 239, 0, 0.1);
+        text-shadow: 0 0 2px rgba(159, 239, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(159, 239, 0, 0.6), 
+                    inset 0 0 10px rgba(159, 239, 0, 0.3);
+        text-shadow: 0 0 8px var(--neon-verde), 
+                     0 0 15px var(--neon-verde);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(159, 239, 0, 0.2), 
+                    inset 0 0 5px rgba(159, 239, 0, 0.1);
+        text-shadow: 0 0 2px rgba(159, 239, 0, 0.3);
+    }
+}
+
+section {
+    padding: 6rem 2rem; 
+    max-width: 1100px;  /* Centra el contenido en pantallas grandes */
+    margin: 0 auto;     /* Centra la sección horizontalmente */
+    border-bottom: 1px dashed rgba(159, 239, 0, 0.15); /* Línea divisoria estilo cyber */
+}
+
+/* Todos los títulos de sección (h2) */
+section h2 {
+    font-family: var(--fuente-codigo);
+    color: var(--neon-verde);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+/* Decoración antes de cada h2 (Vibra de terminal: ">_") */
+section h2::before {
+    content: ">_ ";
+    color: var(--neon-cian);
+    font-weight: bold;
+}
+
+#Sion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: calc(100vh - 70px); /* Ocupa casi toda la pantalla al entrar */
+}
+
+.contenido-Sion {
+    flex: 1;
+}
+
+
+.contenido-Sion h1 {
+    font-family: var(--fuente-codigo);
+    font-size: 3rem;
+    color: var(--texto-brillante);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+
+.contenido-Sion h2 {
+    font-family: var(--fuente-texto);
+    font-size: 1.3rem;
+    color: var(--neon-cian);
+    margin-bottom: 1.5rem;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+#Sion .contenido-Sion h2::before {
+    content: "";
+}
+
+.contenido-Sion p {
+    font-size: 1.1rem;
+    color: var(--texto-apagado);
+    margin-bottom: 2rem;
+    border-left: 3px solid var(--neon-verde);
+    padding-left: 1.5rem;
+}
+
+.Imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Imagen img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--neon-cian);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+    background-color: var(--bg-tarjeta);
+    transition: all 0.5s ease;
+}
+
+
+
+.Imagen img:hover {
+    border-color: var(--neon-verde);
+    box-shadow: 0 0 30px rgba(159, 239, 0, 0.5);
+    transform: scale(1.03); /* Se agranda un poquito de forma suave */
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben en una fila, bajan a la siguiente */
+    gap: 2rem;       /* Espacio de separación entre tarjetas */
+    margin-top: 2rem;
+}
+
+/* Cada tarjeta individual de habilidades */
+.contenido-Skills {
+    flex: 1;
+    min-width: 280px; /* Evita que las tarjetas se hagan demasiado flacas */
+    background-color: var(--bg-tarjeta);
+    border: 1px solid rgba(159, 239, 0, 0.2); /* Un borde verde muy suave */
+    border-radius: 6px;
+    padding: 2rem;
+    transition: transform 0.2s ease; /* Un pequeño efecto de movimiento al pasar el cursor */
+}
+
+/* Un efecto hover muy sutil y común */
+.contenido-Skills:hover {
+    transform: translateY(-5px); /* La tarjeta sube un poquito, nada exagerado */
+    border-color: var(--neon-verde); /* El borde se ilumina un poco más */
+}
+
+/* Títulos dentro de cada tarjeta (Programming, Systems, etc.) */
+.contenido-Skills h3 {
+    font-family: var(--fuente-codigo);
+    color: var(--texto-brillante);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2); /* Línea divisoria interna */
+    padding-bottom: 0.5rem;
+}
+
+/* Lista de habilidades */
+.contenido-Skills ul {
+    list-style: none; /* Quitamos los puntitos por defecto */
+}
+
+.contenido-Skills li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--texto-apagado);
+}
+
+/* Un pequeño detalle: poner un "> " antes de cada habilidad */
+.contenido-Skills li::before {
+    content: "> ";
+    color: var(--neon-verde);
+    font-weight: bold;
+}
+
+
+footer {
+    background-color: #060911; /* Un color oscuro de fondo */
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.1); /* Una línea divisoria muy sutil, sin neón */
+}
+
+.footer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos uno debajo del otro */
+    align-items: center;    /* Centra horizontalmente todo el contenido */
+    gap: 1.2rem;            /* Espaciado ordenado entre el texto y los enlaces */
+    text-align: center;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: var(rgba(253, 253, 253, 0.6)); /* Texto más apagado para el copyright */
+}
+
+.Social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Separación horizontal entre tus redes */
+}
+
+.Social-icon {
+    color: var(rgba(253, 253, 253, 0.8));
+    text-decoration:underline;
+    font-family: var(rgba(--fuente-codigo, monospace));
+    font-size: 1.5rem;
+    transition: color 0.2s ease;
+}
+
+
+
+.modal-oculto {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-oculto.activo {
+    display: flex;
+}
+
+.modal-contenido {
+    width: 90%;
+    max-width: 450px;
+    background-color: var(--bg-tarjeta);
+    border: 2px solid var(--neon-verde);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(159, 239, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+}
+
+.modal-header {
+    background-color: #151d30;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(159, 239, 0, 0.2);
+    color: var(--neon-verde);
+    font-family: var(--fuente-codigo);
+    font-size: 0.85rem;
+}
+
+.modal-header button {
+    background: none;
+    border: none;
+    color: var(--texto-apagado);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal-header button:hover {
+    color: #ff5555;
+}
+
+.modal-body {
+    padding: 2rem 1.5rem;
+}
+
+.modal-body h3 {
+    color: var(--texto-brillante);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-family: var(--fuente-codigo);
+}
+
+.modal-body p {
+    color: var(--texto-apagado);
+    font-size: 1rem;
+}
+
+.modal-subtext {
+    margin-top: 0.5rem;
+    font-size: 0.85rem !important;
+    color: var(--neon-verde) !important;
+    font-family: var(--fuente-codigo);
+}
