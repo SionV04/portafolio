@@ -206,7 +206,7 @@ section h2::before {
     transform: scale(1.03); /* Se agranda un poquito de forma suave */
 }
 
-.skills-grid {
+.Skills-grid {
     display: flex;
     flex-wrap: wrap; /* Si no caben en una fila, bajan a la siguiente */
     gap: 2rem;       /* Espacio de separación entre tarjetas */
