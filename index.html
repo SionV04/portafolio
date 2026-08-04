@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sion gonzales - Portafolio</title>
+    <title>Sion Gonzales - Portafolio</title>
     <link rel="stylesheet" href="estilos.css">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sion Gonzales - Portafolio">
-    <meta property="og:description" content="Portfolio of Sion gonzales, a computer science student interested in cybersecurity">
-    <meta property="og:image" content="assets/img2.jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://siongonzales.github.io/Portafolio/">
+    <meta property="og:description" content="Portfolio of Sion Gonzales, a computer science student interested in cybersecurity">
+    <meta property="og:image" content="https://sionv04.github.io/portafolio/assets/img2.jpeg">
+    <meta property="og:url" content="https://sionv04.github.io/portafolio/">
     <meta name="theme-color" content="#9fef00">
     <link rel="icon" href="assets/img2.jpeg" type="image/x-icon">
 </head>
@@ -73,9 +71,9 @@
                     <h3>Hacking & Cybersecurity & CTFs</h3>
                     <ul>
                         <li>Cryptography</li>
-                        <li>Stenography</li>
+                        <li>Steganography</li>
                         <li>Reversing</li>
-                        <li>Osint</li>
+                        <li>OSINT</li>
                     </ul>
                 </div>
 
@@ -84,7 +82,7 @@
         </section>
     
         <section id="Projects">
-            <p>To be honest I do not have too muchs projects, the reason is that I did not used to keep the projects, in the University I did a web with Laravel and a parser but I no longer have it and I do not really know how to show it here, I also did an IA chatbot with a frind in the subject called Programacion en bajo nivel, but as I said I do not know how to show it here, I consider that I can show the databases that I created or the CTFs that I solved, but Im embarrassed because it is not too much</p>
+            <p>To be honest I do not have too muchs projects, the reason is that I did not used to keep the projects, in the University I did a web with Laravel and a parser but I no longer have it and I do not really know how to show it here, I also did an IA chatbot with a friend in the subject called Programacion en bajo nivel, but as I said I do not know how to show it here, I consider that I can show the databases that I created or the CTFs that I solved, but Im embarrassed because it is not too much</p>
         </section>
 
         <section id="Contact">
@@ -93,7 +91,7 @@
             <form id="Formulario" class="FormularioContainer">
                 <div class="C-form">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name: "required>
+                    <textarea type="text" id="name" name="name" placeholder="Name: "required></textarea>
                 </div>
                 
                 <div class="C-form">
@@ -103,7 +101,7 @@
 
                 <div class="C-form">
                     <label for="message">Message</label>
-                    <input type="text" id="message" name="message" placeholder="Message: " required>
+                    <input type="textarea" id="message" name="message" placeholder="Message: " required>
                 </div>
 
                 <button type="submit" class="boton-submit">Send Message</button>
@@ -120,7 +118,7 @@
                 <a href="https://www.instagram.com/siongonzales/" target="_blank" rel="noopener noreferrer" class="Social-icon">Instagram</a>
                 <a href="https://ctf.cgii.gob.bo/team" target="_blank" rel="noopener noreferrer" class="Social-icon">CITC</a>
                 <a href="" target="_blank" rel="noopener noreferrer" class="Social-icon">HackTheBox</a>
-                <a href="https://codeforces.com/profile/SionV" target="_blank" rel="noopener noreferrer" class="Social-icon">Codeforce</a>
+                <a href="https://codeforces.com/profile/SionV" target="_blank" rel="noopener noreferrer" class="Social-icon">Codeforces</a>
             </div>
         </div>
 
@@ -129,20 +127,26 @@
     </footer>
 
 
+<div id="easter-egg-modal"
+     class="modal-oculto"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="modal-titulo"
+     aria-describedby="modal-desc">
 
-    <div id="easter-egg-modal" class="modal-oculto">
-        <div class="modal-contenido">
-            <div class="modal-header">
-                <span>[SYSTEM ALERTS]</span>
-                <button id="cerrar-modal">X</button>
-            </div>
-            <div class="modal-body">
-                <h3>Congrats</h3>
-                <p>You found the secret window.</p>
-                <p class="modal-subtext">Access granted through keyboard shortcut.</p>
-            </div>
+    <div class="modal-contenido">
+        <div class="modal-header">
+            <span>[SYSTEM ALERTS]</span>
+            <button id="cerrar-modal" type="button" aria-label="Close dialog">X</button>
+        </div>
+        <div class="modal-body">
+            <h3 id="modal-titulo">Congrats</h3>
+            <p id="modal-desc">You found the secret window.</p>
+            <p class="modal-subtext">Access granted through keyboard shortcut.</p>
         </div>
     </div>
+</div>
+
 
     <script src="script.js"></script>
 </body>

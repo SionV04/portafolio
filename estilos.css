@@ -68,28 +68,6 @@ header {
     text-shadow: 0 0 8px var(--neon-verde), 0 0 15px var(--neon-verde);
 }
 
-/* ==========================================
-   EFECTO DE ANIMACIÓN: RESPIRACIÓN NEÓN (GLOW)
-   ========================================== */
-@keyframes neon-glow {
-    0% {
-        box-shadow: 0 0 5px rgba(159, 239, 0, 0.2), 
-                    inset 0 0 5px rgba(159, 239, 0, 0.1);
-        text-shadow: 0 0 2px rgba(159, 239, 0, 0.3);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(159, 239, 0, 0.6), 
-                    inset 0 0 10px rgba(159, 239, 0, 0.3);
-        text-shadow: 0 0 8px var(--neon-verde), 
-                     0 0 15px var(--neon-verde);
-    }
-    100% {
-        box-shadow: 0 0 5px rgba(159, 239, 0, 0.2), 
-                    inset 0 0 5px rgba(159, 239, 0, 0.1);
-        text-shadow: 0 0 2px rgba(159, 239, 0, 0.3);
-    }
-}
-
 
 /* ==========================================
    4. ANIMACIÓN DE RESPIRACIÓN NEÓN (GLOW)
@@ -287,11 +265,11 @@ footer {
 }
 
 .Social-icon {
-    color: var(rgba(253, 253, 253, 0.8));
+    color:rgba(253, 253, 253, 0.8);
     text-decoration:underline;
     font-family: var(rgba(--fuente-codigo, monospace));
     font-size: 1.5rem;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease; /* Transición suave para el hover */
 }
 
 
@@ -371,4 +349,146 @@ footer {
     font-size: 0.85rem !important;
     color: var(--neon-verde) !important;
     font-family: var(--fuente-codigo);
+}
+
+/* ============ FOCO VISIBLE (accesibilidad) ============ */
+:focus-visible {
+    outline: 2px solid var(--neon-verde);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* ============ HOVER DE REDES (faltaba) ============ */
+.Social-icon:hover {
+    color: var(--neon-verde);
+    text-shadow: 0 0 8px rgba(159, 239, 0, 0.6);
+}
+
+/* ============ FORMULARIO ============ */
+.FormularioContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.C-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.C-form label {
+    font-family: var(--fuente-codigo);
+    color: var(--neon-verde);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.C-form input,
+.C-form textarea {
+    background-color: var(--bg-tarjeta);
+    border: 1px solid rgba(159, 239, 0, 0.2);
+    border-radius: 4px;
+    padding: 0.9rem 1rem;
+    color: var(--texto-brillante);
+    font-family: var(--fuente-codigo);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.C-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.C-form input::placeholder,
+.C-form textarea::placeholder {
+    color: rgba(148, 163, 184, 0.5);
+}
+
+.C-form input:focus,
+.C-form textarea:focus {
+    outline: none;
+    border-color: var(--neon-verde);
+    box-shadow: 0 0 10px rgba(159, 239, 0, 0.25);
+}
+
+.boton-submit {
+    align-self: flex-start;
+    background-color: transparent;
+    border: 2px solid var(--neon-verde);
+    color: var(--neon-verde);
+    font-family: var(--fuente-codigo);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.boton-submit:hover {
+    background-color: var(--neon-verde);
+    color: var(--bg-principal);
+    box-shadow: 0 0 20px rgba(159, 239, 0, 0.5);
+}
+
+/* ============ PROYECTOS ============ */
+#Projects p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 1.5rem;
+    }
+
+    #Sion {
+        flex-direction: column-reverse;
+        min-height: auto;
+        padding-top: 3rem;
+        gap: 2rem;
+    }
+
+    .contenido-Sion h1 {
+        font-size: 2.2rem;
+    }
+
+    .contenido-Sion h2 {
+        font-size: 1.1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    .Menu ul {
+        flex-wrap: wrap;
+        gap: 0.4rem 0;
+    }
+
+    .Menu li {
+        margin: 0 0.8rem;
+    }
+
+    .Menu a {
+        font-size: 0.9rem;
+    }
+
+    .Social-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .Social-icon {
+        font-size: 1.1rem;
+    }
 }
