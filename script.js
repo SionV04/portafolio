@@ -47,20 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
-
     
-    const formulario = document.querySelector('.FormularioContainer form');
+    const formulario = document.getElementById('Formulario');
 
     if (formulario) {
         formulario.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const nombre = formulario.querySelector('input[type="text"]').value.trim();
-            const email = formulario.querySelector('input[type="email"]').value.trim();
-            const mensaje = formulario.querySelector('textarea').value.trim();
+            const nombre = formulario.elements.value.trim();
+            const email = formulario.elements.value.trim();
+            const mensaje = formulario.elements.value.trim();
 
-            if (nombre === '' || email === '' || mensaje === '') {
+            if (!nombre || !email || !mensaje) {
                 alert('[ERROR] Por favor, completa todos los campos del formulario.');
                 return;
             }
