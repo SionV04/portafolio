@@ -446,49 +446,128 @@ footer {
 }
 
 /* ============ RESPONSIVE ============ */
+/* ============ PROYECTOS ============ */
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+gap: 1.5rem;
+margin-top: 2rem;
+}
+
+.projects-card {
+background-color: var(--bg-tarjeta);
+border: 1px solid rgba(159, 239, 0, 0.2);
+border-radius: 6px;
+padding: 1.5rem;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projects-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 0 15px rgba(159, 239, 0, 0.4);
+}
+
+.projects-card h3 {
+font-family: var(--fuente-codigo);
+color: var(--texto-brillante);
+font-size: 1.3rem;
+margin-bottom: 0.8rem;
+}
+
+.projects-card p {
+font-size: 1rem;
+color: var(--texto-apagado);
+margin-bottom: 0.5rem;
+}
+
+/* En tu HTML se llama class="project-stack" (sin s), aquí ponemos ambos para que tome el color cian */
+.project-stack,
+.projects-stack {
+font-size: 0.9rem !important;
+color: var(--neon-cian) !important;
+font-family: var(--fuente-codigo);
+margin-top: 0.8rem;
+}
+
+.projects-card a,
+.project-card a {
+color: var(--neon-verde);
+text-decoration: none;
+font-family: var(--fuente-codigo);
+font-size: 0.9rem;
+transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.projects-card a:hover,
+.project-card a:hover {
+color: var(--neon-cian);
+text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+/* ============ RESPONSIVE (Móviles) ============ */
 @media (max-width: 768px) {
-    section {
-        padding: 4rem 1.5rem;
-    }
+section {
+padding: 4rem 1.25rem;
+}
 
-    #Sion {
-        flex-direction: column-reverse;
-        min-height: auto;
-        padding-top: 3rem;
-        gap: 2rem;
-    }
+#Sion {
+    flex-direction: column-reverse;
+    min-height: auto;
+    padding-top: 2.5rem;
+    gap: 2rem;
+    text-align: center;
+}
 
-    .contenido-Sion h1 {
-        font-size: 2.2rem;
-    }
+.contenido-Sion p {
+    text-align: left;
+}
 
-    .contenido-Sion h2 {
-        font-size: 1.1rem;
-    }
+.contenido-Sion h1 {
+    font-size: 2.1rem;
+}
 
-    section h2 {
-        font-size: 1.5rem;
-    }
+.contenido-Sion h2 {
+    font-size: 1.1rem;
+}
 
-    .Menu ul {
-        flex-wrap: wrap;
-        gap: 0.4rem 0;
-    }
+.Imagen img {
+    max-width: 230px;
+}
 
-    .Menu li {
-        margin: 0 0.8rem;
-    }
+section h2 {
+    font-size: 1.5rem;
+}
 
-    .Menu a {
-        font-size: 0.9rem;
-    }
+.contenido-Skills {
+    min-width: 100%;
+}
 
-    .Social-links {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+.Menu ul {
+    flex-wrap: wrap;
+    gap: 0.4rem 0;
+}
 
-    .Social-icon {
-        font-size: 1.1rem;
-    }
+.Menu li {
+    margin: 0 0.7rem;
+}
+
+.Menu a {
+    font-size: 0.9rem;
+}
+
+.boton-submit {
+    width: 100%;
+    text-align: center;
+}
+
+.Social-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Social-icon {
+    font-size: 1.1rem;
+}
+
+
 }
